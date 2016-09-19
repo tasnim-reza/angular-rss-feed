@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="rssFeed">
+<head>	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>News Feed</title>
+	<link rel="shortcut icon" href="./img/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<h2>hello</h2>
+	<nav>
+		<a href="#home">Home</a>
+		<a href="#feed-setting">Setting</a>
+	</nav>
+
+	<div class="container-fluid" ng-view></div>
+
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.min.js"></script>
+    <script src="../node_modules/d3/build/d3.min.js"></script>
+	<!--<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <script src="app.js"></script>
+	<script src="feed-reader.service.js"></script>
+</body>
+</html>
