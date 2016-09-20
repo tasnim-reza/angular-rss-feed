@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="col-sm-8">
+		<h2>RSS Feeds</h2><br>
+		<div class="row">
+			<div class="col-sm-12 slideanim">
+				<div class="row">
+					<div class="col-sm-8 form-group">
+						<button class="btn" ng-click="back()">Back</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 slideanim">
+				<div class="row">
+					<div class="col-sm-8 form-group">
+						<select class="form-control" ng-options="item as item for item in feeders" ng-model="currentFeeder"></select>
+					</div>
+					<div class="col-sm-4 form-group">
+						<button class="btn btn-default pull-right" type="submit" ng-click="loadFeed(true)">Refresh</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ul class="list-group">
+			<span class="badge badge-warning" ng-show="feeds.length > 0">{{(feeds | filter:buscarTexto).length}} Itens</span>
+			<li class="list-group-item" ng-repeat="feed in feeds">
+				<img ng-src="{{feed.src}}">
+				<h5><a target="_blank" href="{{feed.link}}">{{feed.title}}</a></h5>
+				<p class="text-left">{{feed.contentSnippet}}</p>
+				<span class="small">{{feed.publishedDate}}</span>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-sm-8">
+        <h2>RSS Feeds</h2><br>
+        <div class="row">
+            <div class="col-sm-12 slideanim">
+                <div class="row">
+                    <div class="col-sm-8 form-group">
+                        <button class="btn" ng-click="back()">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 slideanim">
+                <div class="row">
+                    <div class="col-sm-8 form-group">
+                        <input class="form-control" placeholder="keyword" ng-model="keyWord">                        
+                    </div>
+                    <div class="col-sm-4 form-group">
+                        <button class="btn btn-default pull-right" ng-click="refreshChart()">Refresh</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class=" text-center" d3-donut data="chartData" label="chartLabel" current-data-set="currentDataSet"></div>
+    </div>
+</div>
